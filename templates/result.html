@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exam Analysis Result</title>
+</head>
+<body>
+
+    <h2>Exam Analysis Complete</h2>
+
+    <hr>
+
+    <p><strong>Exam Mode:</strong> {{ report.mode }}</p>
+    <p><strong>Total Frames:</strong> {{ report.total_frames }}</p>
+    <p><strong>Face Violations:</strong> {{ report.face_violations }}</p>
+    <p><strong>Person Violations:</strong> {{ report.person_violations }}</p>
+    <p><strong>Phone Events:</strong> {{ report.phone_events }}</p>
+    <p><strong>Book Events:</strong> {{ report.book_events }}</p>
+
+    <h3>Risk Score: {{ report.risk_score }}</h3>
+    <h3>Risk Percentage: {{ report.risk_percentage }}%</h3>
+    <h3>Risk Level: {{ report.risk_level }}</h3>
+
+    <hr>
+
+    <h2>AI Risk Analytics</h2>
+
+    {% if report.risk_percentage %}
+        <p>Overall exam risk is {{ report.risk_level }}.</p>
+    {% else %}
+        <p>Analytics data not available.</p>
+    {% endif %}
+
+    <hr>
+
+    <h2>Evidence Images</h2>
+
+    {% if report.evidence and report.evidence|length > 0 %}
+        {% for img in report.evidence %}
+            <img src="/{{ img }}" width="300" style="margin:10px;">
+        {% endfor %}
+    {% else %}
+        <p>No evidence images found.</p>
+    {% endif %}
+
+    <br><br>
+    <a href="/">Analyze Another Video</a>
+
+</body>
+</html>

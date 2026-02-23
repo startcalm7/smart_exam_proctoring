@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Exam Proctoring System</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            background-color: #f4f6f9;
+        }
+        .container {
+            margin-top: 80px;
+        }
+        .upload-box {
+            padding: 30px;
+            background: white;
+            width: 40%;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        input, select {
+            padding: 8px;
+            margin-top: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="upload-box">
+        <h1>AI-Based Smart Exam Proctoring</h1>
+
+        <form method="POST" enctype="multipart/form-data">
+
+            <label for="video"><strong>Upload Exam Video:</strong></label><br>
+            <input type="file" name="video" accept="video/*" required>
+
+            <br><br>
+
+            <!-- ✅ Exam Mode Selection -->
+            <label for="mode"><strong>Select Exam Mode:</strong></label><br>
+            <select name="mode" required>
+                <option value="classroom">Classroom Mode</option>
+                <option value="online">Online Mode</option>
+            </select>
+
+            <br><br>
+
+            <button type="submit">Analyze Video</button>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
