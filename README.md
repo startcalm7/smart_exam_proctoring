@@ -1,8 +1,8 @@
-\# 🎓 Smart Exam Proctoring System
+ Smart Exam Proctoring System
 
 
 
-\## 📌 1. Problem Statement
+ 1. Problem Statement
 
 
 
@@ -30,7 +30,7 @@ This project aims to design and implement an AI-based Smart Exam Proctoring Syst
 
 
 
-\## 🏗 2. System Architecture
+ 2. System Architecture
 
 
 
@@ -121,16 +121,11 @@ Suspicious events are triggered when:
 Each event increases a cumulative risk score.
 
 
-
----
-
-
-
-\## ⚠️ 4. Major Challenges Faced \& How They Were Solved
+4. Major Challenges Faced \& How They Were Solved
 
 
 
-\### 1️⃣ Folder Structure \& Import Errors
+\###1️⃣ Folder Structure \& Import Errors
 
 
 
@@ -267,56 +262,7 @@ Created `.gitignore` to exclude:
 Improved repository cleanliness and professionalism.
 
 
-
----
-
-
-
-\## 🚫 5. Limitations
-
-
-
-\- Works only on recorded video (not live streaming)
-
-\- Accuracy depends on lighting conditions
-
-\- YOLO model limited to available trained classes
-
-\- No real-time alert system
-
-\- No database integration (local report only)
-
-
-
----
-
-
-
-\## 🚀 6. Future Improvements
-
-
-
-\- Live webcam monitoring integration
-
-\- Real-time alert dashboard
-
-\- Cloud deployment (AWS / Render)
-
-\- Database integration (MySQL / MongoDB)
-
-\- Improved UI/UX design
-
-\- Custom trained detection model
-
-\- Email notification system for suspicious events
-
-
-
----
-
-
-
-\## 🧪 7. Error Handling \& Validation
+\## 5. Error Handling \& Validation
 
 
 
@@ -340,7 +286,7 @@ This ensures robustness and production-level reliability.
 
 
 
-\## 📦 8. Technologies Used
+\## 6. Technologies Used
 
 
 
@@ -359,12 +305,7 @@ This ensures robustness and production-level reliability.
 \- Git \& GitHub
 
 
-
----
-
-
-
-\## 💡 9. Key Learning Outcomes
+\## 7. Key Learning Outcomes
 
 
 
@@ -380,13 +321,99 @@ This ensures robustness and production-level reliability.
 
 \- Writing professional documentation
 
+## 8. Project structure
 
+smart_exam_proctoring/
+│
+├── static/
+│   ├── uploads/
+│   ├── evidence/
+│
+├── docs/
+│   └── screenshots/
+│
+├── data/
+├── models/
+├── app.py
+├── requirements.txt
+└── README.md
+
+🧠 9. How It Works
+
+User uploads exam video.
+
+Frames are processed using YOLOv8 model.
+
+Suspicious objects/behaviors are detected.
+
+Evidence images are automatically saved.
+
+Web interface displays results.
+
+🎯 10. Use Cases
+
+Online university exams
+
+Remote certification tests
+
+Competitive exam monitoring
+
+Classroom AI surveillance
+
+\## 11. Key Learning Outcomes
+
+
+
+\- Modular project structuring
+
+\- Backend error handling
+
+\- Debugging Flask applications
+
+\- Managing large ML models
+
+\- Git version control best practices
+
+\- Writing professional documentation
+
+\## 12. Limitations
+
+
+
+\- Works only on recorded video (not live streaming)
+
+\- Accuracy depends on lighting conditions
+
+\- YOLO model limited to available trained classes
+
+\- No real-time alert system
+
+\- No database integration (local report only)
+
+
+\## 🚀 13. Future Improvements
+
+
+
+\- Live webcam monitoring integration
+
+\- Real-time alert dashboard
+
+\- Cloud deployment (AWS / Render)
+
+\- Database integration (MySQL / MongoDB)
+
+\- Improved UI/UX design
+
+\- Custom trained detection model
+
+\- Email notification system for suspicious events
 
 ---
 
 
 
-\## 👩‍💻 Author
+\##  Author
 
 
 
